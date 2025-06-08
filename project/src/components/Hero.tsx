@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import FallingFlower from './FallingFlower';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,15 +10,13 @@ const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const lotusRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const hero = heroRef.current;
     const bg = bgRef.current;
     const content = contentRef.current;
-    const lotus = lotusRef.current;
 
-    if (!hero || !bg || !content || !lotus) return;
+    if (!hero || !bg || !content) return;
 
     // Parallax effect for background
     gsap.to(bg, {
@@ -29,15 +28,6 @@ const Hero: React.FC = () => {
         end: "bottom top",
         scrub: true
       }
-    });
-
-    // Floating animation for lotus
-    gsap.to(lotus, {
-      y: -20,
-      duration: 3,
-      ease: "power2.inOut",
-      yoyo: true,
-      repeat: -1
     });
 
     // Content animation on scroll
@@ -58,8 +48,30 @@ const Hero: React.FC = () => {
 
   }, []);
 
+  // Generate random configurations for falling flowers
+  const flowerConfigs = Array.from({ length: 15 }, (_, i) => ({
+    id: i,
+    delay: Math.random() * 10, // Random delay between 0-10 seconds
+    duration: 8 + Math.random() * 6, // Duration between 8-14 seconds
+    size: 30 + Math.random() * 40, // Size between 30-70px
+    opacity: 0.2 + Math.random() * 0.4, // Opacity between 0.2-0.6
+    startX: Math.random() * 100 // Random starting X position
+  }));
+
   return (
     <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ minHeight: '120vh' }}>
+      {/* Falling flowers */}
+      {flowerConfigs.map((config) => (
+        <FallingFlower
+          key={config.id}
+          delay={config.delay}
+          duration={config.duration}
+          size={config.size}
+          opacity={config.opacity}
+          startX={config.startX}
+        />
+      ))}
+
       {/* Background with parallax */}
       <div 
         ref={bgRef}
@@ -78,27 +90,6 @@ const Hero: React.FC = () => {
             <rect width="100" height="100" fill="url(#lotus-pattern)" />
           </svg>
         </div>
-      </div>
-
-      {/* Floating lotus decoration */}
-      <div ref={lotusRef} className="absolute top-20 right-20 opacity-20">
-        <svg width="100" height="100" viewBox="0 0 100 100" className="text-lotus-pink">
-          <g className="animate-spin-slow">
-            {[...Array(8)].map((_, i) => (
-              <ellipse
-                key={i}
-                cx="50"
-                cy="30"
-                rx="4"
-                ry="15"
-                fill="currentColor"
-                transform={`rotate(${i * 45} 50 50)`}
-                opacity={0.6}
-              />
-            ))}
-            <circle cx="50" cy="50" r="6" fill="currentColor" />
-          </g>
-        </svg>
       </div>
 
       {/* Main content */}
