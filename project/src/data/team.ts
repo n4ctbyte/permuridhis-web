@@ -3,82 +3,127 @@ export interface TeamMember {
   name: string;
   role: string;
   image: string;
-  bio: string;
-  email?: string;
   department?: string;
 }
 
 export const teamMembers: TeamMember[] = [
   {
     id: "1",
-    name: "Dharma Wijaya",
+    name: "Jhodye Fortunate",
     role: "Ketua Umum",
     image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-    bio: "Memimpin Permuridhis dengan visi menyebarkan nilai-nilai Buddha di lingkungan kampus UNRI. Aktif dalam kegiatan dharma dan pelayanan masyarakat.",
-    email: "ketua@permuridhis.org",
-    department: "Teknik Elektro"
+    department: "Kimia"
   },
   {
     id: "2",
-    name: "Sari Kusuma",
+    name: "Wenfey Estefan",
     role: "Wakil Ketua",
     image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-    bio: "Mendukung kepemimpinan organisasi dan mengkoordinasi program-program keagamaan serta kegiatan sosial kemasyarakatan.",
-    email: "wakil@permuridhis.org",
-    department: "Psikologi"
+    department: "Teknik Elektro"
   },
   {
     id: "3",
-    name: "Budi Santoso",
+    name: "Angelin Loiwanta",
     role: "Sekretaris",
     image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-    bio: "Mengelola administrasi organisasi dan dokumentasi kegiatan. Bertanggung jawab atas komunikasi internal dan eksternal.",
-    email: "sekretaris@permuridhis.org",
-    department: "Administrasi Bisnis"
+    department: "Teknologi Pulp dan Kertas"
   },
   {
     id: "4",
-    name: "Maya Dewi",
+    name: "Gisela Amelinda",
     role: "Bendahara",
     image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-    bio: "Mengelola keuangan organisasi dengan transparansi dan akuntabilitas. Mengkoordinasi penggalangan dana untuk kegiatan sosial.",
-    email: "bendahara@permuridhis.org",
     department: "Akuntansi"
   },
   {
     id: "5",
-    name: "Andi Wijaya",
-    role: "Koordinator Kegiatan",
+    name: "Felim Arwin",
+    role: "Koordinator Bidang Public Relation",
     image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-    bio: "Merencanakan dan melaksanakan berbagai kegiatan dharma, retreat, dan program pengembangan spiritual anggota.",
-    email: "kegiatan@permuridhis.org",
-    department: "Manajemen"
+    department: "Usaha Perjalanan Wisata"
   },
   {
     id: "6",
-    name: "Lisa Maharani",
-    role: "Koordinator Humas",
+    name: "Putra Delim",
+    role: "Koordinator Bidang Spirituality",
     image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-    bio: "Menjalin hubungan dengan organisasi Buddha lainnya dan mengelola komunikasi publik melalui media sosial dan website.",
-    email: "humas@permuridhis.org",
-    department: "Komunikasi"
+    department: "Ilmu Komunikasi"
   },
   {
     id: "7",
-    name: "Putu Wayan",
-    role: "Koordinator Dana",
+    name: "Nakata Christian",
+    role: "Koordinator Bidang Human Resource and Equipment",
     image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-    bio: "Mengkoordinasi program dana (sumbangan) untuk kegiatan sosial dan bantuan kepada sesama, terutama dalam situasi darurat.",
-    email: "dana@permuridhis.org",
-    department: "Ekonomi"
+    department: "Teknik Informatika"
   },
   {
     id: "8",
-    name: "Kadek Ayu",
-    role: "Koordinator Kebaktian",
+    name: "Lili",
+    role: "Anggota Bidang Spirituality",
     image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
-    bio: "Memimpin pelaksanaan kebaktian rutin, retreat spiritual, dan program pembelajaran dharma untuk anggota dan masyarakat umum.",
-    email: "kebaktian@permuridhis.org",
     department: "Filsafat"
-  }
+  },
+  {
+    id: "9",
+    name: "Olga Chuacleonata",
+    role: "Anggota Bidang Spirituality",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Teknologi Pulp dan Kertas"
+  },
+  {
+    id: "10",
+    name: "Velda Fennecia Angga",
+    role: "Anggota Bidang Spirituality",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Teknologi Pulp dan Kertas"
+  },
+  {
+    id: "11",
+    name: "Eric Cahyadi",
+    role: "Anggota Bidang Public Relation",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Agroteknologi"
+  },
+  {
+    id: "12",
+    name: "Drevit Sutantry",
+    role: "Anggota Bidang Public Relation",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Teknologi Pulp dan Kertas"
+  },
+  {
+    id: "13",
+    name: "Eli Shinta",
+    role: "Anggota Bidang Public Relation",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Kimia"
+  },
+  {
+    id: "14",
+    name: "Roger Felasco",
+    role: "Anggota Bidang Public Relation",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Agroteknologi"
+  },
+  {
+    id: "15",
+    name: "Fabio Carlos",
+    role: "Anggota Bidang Human Resource and Equipment",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Manajemen"
+  },
+  {
+    id: "16",
+    name: "Tanti Villanie",
+    role: "Anggota Bidang Human Resource and Equipment",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Teknologi Pulp dan Kertas"
+  },
+  {
+    id: "17",
+    name: "Albert Wujaya",
+    role: "Anggota Bidang Human Resource and Equipment",
+    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    department: "Teknik Informatika"
+  },
 ];
